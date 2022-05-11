@@ -4,9 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'python3 -m venv .venv'
-                sh 'source .venv/bin/activate'
-                sh 'pip install pytest'
+                sh 'pip install --user --upgrade pip'
+                sh 'pip install --user pytest'
                 sh 'pytest'
             }
         }
