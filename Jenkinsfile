@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'python:3.8' } }
+    agent { docker }
     stages {
         stage('build') {
             steps {
-                sh 'dir'
+                sh 'docker build -t tests .'
             }
         }
     }
