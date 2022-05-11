@@ -4,7 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'pip install virtualenv '
+                sh 'venv/bin/activate'
+                sh 'pip install pytest '
                 sh 'pytest'
             }
         }
