@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'su'
                 sh 'apt-get install sudo'
                 sh 'python --version'
                 sh 'sudo python -m pip install pytest'
