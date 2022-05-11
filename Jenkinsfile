@@ -4,7 +4,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'pip install --upgrade pip'
+                sh 'virtualenv enviroment_name -p python3'
+                sh 'source enviroment_name/bin/activate'
                 sh 'pip install pytest'
                 sh 'pytest'
             }
