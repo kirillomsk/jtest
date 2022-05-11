@@ -5,6 +5,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo python --version'
+                sh 'pip install -r req.txt'
+                sh 'pytest'
             }
         }
     }
