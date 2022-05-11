@@ -4,8 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh '. venv/bin/activate'
-                sh 'sudo pip install pytest '
+                sh 'pip install pytest --jenkins'
                 sh 'pytest'
             }
         }
