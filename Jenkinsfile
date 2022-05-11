@@ -3,9 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'apt-get install sudo'
+                sh 'sudo usermod -a -G docker jenkins'
                 sh 'python --version'
-                sh 'sudo python -m pip install pytest'
+                sh 'pip install pytest --user'
                 sh 'pytest'
             }
         }
