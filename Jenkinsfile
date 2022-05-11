@@ -4,8 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'sudo -H pip3 install --upgrade pip'
-                sh 'sudo -H pip3 install pytest'
+                sh 'sudo python -m pip install pytest'
                 sh 'pytest'
             }
         }
