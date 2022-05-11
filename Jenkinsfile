@@ -4,7 +4,9 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'sudo pip install -r req.txt'
+                sh 'python -m venv venv'
+                sh 'venv\Scripts\Activate'
+                sh 'pip install -r req.txt'
                 sh 'pytest'
             }
         }
