@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'pip install pytest --jenkins'
+                sh 'pip install pytest --user'
                 sh 'pytest'
             }
         }
