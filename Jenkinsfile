@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                sh 'pip install -r req.txt'
+                sh 'pip install pytest'
                 sh 'pytest'
             }
         }
